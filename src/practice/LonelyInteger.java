@@ -22,6 +22,6 @@ public class LonelyInteger {
         return duplicateNumbers.entrySet().stream().
                 filter(entry -> entry.getValue().equals(false)).
                 map(Map.Entry::getKey).
-                collect(Collectors.toList()).get(0);
+                findFirst().get();
     }
 }
